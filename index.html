@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Zafer Elcik · Contact</title>
-<meta name="description" content="Reach Zafer Elcik directly: phone, WhatsApp, email or LinkedIn.">
+<meta name="description" content="Reach Zafer Elcik directly: WhatsApp, phone, email or LinkedIn.">
 <meta property="og:title" content="Zafer Elcik · Contact">
-<meta property="og:description" content="Reach me directly: phone, WhatsApp, email or LinkedIn.">
+<meta property="og:description" content="Reach me directly: WhatsApp, phone, email or LinkedIn.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://zafer.tel/">
 <meta property="og:image" content="https://zafer.tel/avatar.jpg">
@@ -14,195 +14,97 @@
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232b2b2b'/%3E%3Cpath d='M9 10h14v2.6L13.6 22H23v2H9v-2.6L18.4 12H9z' fill='%23fff'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500&family=Inter:wght@300;400&family=DM+Mono:wght@500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --frame:1.5rem; --gutter:3rem;
-    --r-xl:1.5rem; --r-lg:1rem; --r-md:.75rem; --r-sm:.5rem;
-    --bg:#f1f1f1; --sheet:#fafafa; --card:#ffffff; --card-2:#f6f6f6;
-    --ink:#2b2b2b; --ink-2:#656565; --ink-3:#a2a2a2; --line:#e4e4e4; --line-2:#d7d7d7;
+    --bg:#f1f1f1; --card:#fff; --card-2:#f4f4f4;
+    --ink:#2b2b2b; --ink-2:#656565; --ink-3:#a2a2a2;
     --pink:#fc4778;
-    --display:"Inter Tight",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    --sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
-    --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+    --display:"Inter Tight",system-ui,-apple-system,sans-serif;
+    --sans:"Inter",system-ui,-apple-system,sans-serif;
+    --mono:"DM Mono",ui-monospace,Menlo,monospace;
   }
   *{box-sizing:border-box}
-  html{-webkit-text-size-adjust:100%}
-  body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;font-size:1.0625rem;line-height:1.35;
-       -webkit-font-smoothing:antialiased;padding:0 var(--frame) var(--frame);}
+  body{margin:0;min-height:100vh;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;
+       -webkit-font-smoothing:antialiased;display:flex;justify-content:center;padding:1rem}
   ::selection{background:var(--pink);color:#fff}
   a{color:inherit;text-decoration:none}
-  h1{font-family:var(--display);font-weight:400;margin:0;font-size:clamp(3.25rem,9vw,7.625rem);letter-spacing:-.05em;line-height:.86}
-  p{margin:0}
-  .mono{font-family:var(--mono);font-size:.75rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
-  .dot{color:var(--pink);margin:0 .55em}
+  main{width:100%;max-width:26rem;padding:2.5rem 0 1rem}
+  .mono{font-family:var(--mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500}
 
-  /* language switching */
   .tr{display:none}
   html[data-lang="tr"] .tr{display:inline}
   html[data-lang="tr"] .en{display:none}
 
-  /* dotted halftone texture */
-  .halftone{position:absolute;inset:0;pointer-events:none;border-radius:inherit;overflow:hidden}
-  .halftone::before{content:"";position:absolute;inset:0;
-    background-image:radial-gradient(circle at 1px 1px, rgba(43,43,43,.28) 1px, transparent 1.6px);
-    background-size:9px 9px;
-    -webkit-mask-image:radial-gradient(ellipse 60% 70% at 0% 0%, #000 0%, rgba(0,0,0,.45) 35%, transparent 70%);
-            mask-image:radial-gradient(ellipse 60% 70% at 0% 0%, #000 0%, rgba(0,0,0,.45) 35%, transparent 70%);}
-  .halftone.tr-corner::before{-webkit-mask-image:radial-gradient(ellipse 55% 65% at 100% 0%, #000 0%, rgba(0,0,0,.45) 35%, transparent 70%);mask-image:radial-gradient(ellipse 55% 65% at 100% 0%, #000 0%, rgba(0,0,0,.45) 35%, transparent 70%)}
+  .lang{position:fixed;top:1rem;right:1rem;display:flex}
+  .lang button{border:0;background:transparent;font:500 .7rem/1 var(--mono);letter-spacing:.06em;padding:.5rem .5rem;border-radius:.4rem;color:var(--ink-3);cursor:pointer}
+  .lang button[aria-pressed="true"]{background:#fff;color:var(--ink)}
 
-  /* nav */
-  .nav{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:var(--frame) 0}
-  .brand{width:2.5rem;height:2.5rem;border-radius:var(--r-sm);background:var(--ink);color:#fff;display:grid;place-items:center;
-         font-family:var(--display);font-weight:500;font-size:17px;letter-spacing:-.05em}
-  .nav-right{display:flex;align-items:center;gap:.75rem}
-  .lang{display:inline-flex;gap:.125rem}
-  .lang button{border:0;background:transparent;font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;padding:.75rem .625rem;border-radius:var(--r-sm);
-               color:var(--ink-3);cursor:pointer;font-weight:500}
-  .lang button[aria-pressed="true"]{background:#fff;color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.08)}
-  .btn{display:inline-flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-radius:var(--r-sm);border:1px solid var(--ink);
-       font-family:var(--mono);font-size:.72rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;line-height:1;
-       transition:transform .2s ease, background .2s ease;background:transparent;color:var(--ink)}
-  .btn:hover{transform:translateY(-1px)}
+  header{text-align:center;margin-bottom:2rem}
+  .avatar{width:6.5rem;height:6.5rem;border-radius:50%;object-fit:cover;display:block;margin:0 auto 1.25rem;background:var(--card-2);
+          box-shadow:0 0 0 5px #fff,0 10px 28px rgba(0,0,0,.08)}
+  h1{font-family:var(--display);font-weight:500;font-size:2rem;letter-spacing:-.04em;line-height:1;margin:0}
+  .role{margin-top:.75rem;color:var(--ink-2)}
+  .role .dot{color:var(--pink);margin:0 .4em}
 
-  /* hero sheet */
-  .sheet{position:relative;background:var(--sheet);border-radius:var(--r-xl);padding:clamp(4rem,9vw,7rem) var(--gutter) clamp(3rem,6vw,5rem);
-         text-align:center;overflow:hidden;box-shadow:0 1px 0 rgba(0,0,0,.03)}
-  .hero-inner{position:relative;max-width:1040px;margin:0 auto}
-  .avatar{width:7rem;height:7rem;border-radius:50%;object-fit:cover;display:block;margin:0 auto clamp(1.75rem,3vw,2.5rem);
-          background:var(--card-2);box-shadow:0 0 0 6px #fff, 0 12px 32px rgba(0,0,0,.08)}
-  .badges{display:flex;flex-wrap:wrap;justify-content:center;gap:.25rem 0;margin-bottom:clamp(1.75rem,3vw,2.75rem);color:var(--ink-2)}
-  .lede{max-width:27.5em;margin:clamp(1.75rem,3vw,2.75rem) auto 0;font-size:clamp(1.0625rem,1.4vw,1.25rem);line-height:1.3;color:var(--ink-2);text-wrap:balance}
+  .links{display:flex;flex-direction:column;gap:.625rem}
+  .link{display:flex;align-items:center;gap:.875rem;background:var(--card);border-radius:1rem;padding:.75rem 1rem .75rem .75rem;
+        transition:transform .2s ease, box-shadow .2s ease}
+  .link:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(0,0,0,.06)}
+  .link:active{transform:scale(.98)}
+  .ic{flex:none;width:2.75rem;height:2.75rem;border-radius:.75rem;background:var(--card-2);display:grid;place-items:center}
+  .ic svg{width:1.25rem;height:1.25rem;fill:currentColor}
+  .link.primary{background:var(--ink);color:#fff}
+  .link.primary .ic{background:rgba(255,255,255,.12)}
+  .txt{flex:1;min-width:0}
+  .txt b{display:block;font-family:var(--display);font-weight:500;font-size:1.0625rem;letter-spacing:-.01em}
+  .txt > span{display:block;font-size:.875rem;color:var(--ink-2);margin-top:.15rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .link.primary .txt > span{color:rgba(255,255,255,.65)}
+  .arr{color:var(--ink-3)}
+  .link.primary .arr{color:var(--pink)}
 
-  /* contact list */
-  .wrap{max-width:1264px;margin:0 auto}
-  .channels{display:grid;grid-template-columns:repeat(4,1fr);gap:1.125rem;margin-top:1.125rem}
-  .ch{position:relative;background:var(--card);border-radius:var(--r-xl);padding:1.5rem;min-height:13rem;display:flex;flex-direction:column;justify-content:space-between;
-      border:1px solid rgba(0,0,0,.03);box-shadow:0 1px 2px rgba(0,0,0,.03);transition:transform .25s ease, box-shadow .25s ease}
-  .ch:hover{transform:translateY(-3px);box-shadow:0 14px 36px rgba(0,0,0,.07)}
-  .ch-top{display:flex;justify-content:space-between;align-items:flex-start}
-  .ic{width:3rem;height:3rem;border-radius:var(--r-md);background:var(--card-2);display:grid;place-items:center;color:var(--ink);transition:background .25s ease,color .25s ease}
-  .ic svg{width:1.375rem;height:1.375rem;fill:currentColor}
-  .ch:hover .ic{background:var(--ink);color:#fff}
-  .arr{color:var(--ink-3);font-size:1.25rem;line-height:1;transition:color .25s ease, transform .25s ease}
-  .ch:hover .arr{color:var(--pink);transform:translate(2px,-2px)}
-  .ch .k{color:var(--pink);display:block;margin-bottom:.625rem}
-  .ch .t{font-family:var(--display);font-weight:500;font-size:clamp(1.375rem,2vw,1.75rem);letter-spacing:-.02em;line-height:1}
-  .ch .v{display:block;margin-top:.625rem;color:var(--ink-2);font-size:.9375rem;overflow-wrap:anywhere}
-
-  footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;padding:1.5rem .5rem 0;color:var(--ink-2);font-size:.875rem}
+  footer{text-align:center;margin-top:2rem;color:var(--ink-3)}
   footer a:hover{color:var(--ink)}
-
-  /* reveal */
-  .rv{opacity:0;transform:translateY(14px);animation:rv .7s ease forwards}
-  .rv:nth-child(2){animation-delay:.06s}.rv:nth-child(3){animation-delay:.12s}.rv:nth-child(4){animation-delay:.18s}
-  @keyframes rv{to{opacity:1;transform:none}}
-  @media (prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;animation:none}}
-
-  @media (max-width:980px){
-    :root{--gutter:2rem}
-    .channels{grid-template-columns:1fr 1fr}
-  }
-  @media (max-width:680px){
-    :root{--frame:1rem;--gutter:1.25rem}
-    .nav{padding:1rem 0}
-    .channels{grid-template-columns:1fr;gap:.75rem;margin-top:.75rem}
-    .ch{min-height:0;flex-direction:row;align-items:center;justify-content:flex-start;gap:1rem;padding:1rem}
-    .ch-top{flex:none}
-    .ch .arr{display:none}
-    .ch .body{flex:1;min-width:0}
-    .ch .k{margin-bottom:.375rem}
-    .ch .t{font-size:1.25rem}
-    .ch .v{margin-top:.375rem;font-size:.875rem}
-  }
 </style>
 </head>
 <body>
 
-<header class="nav">
-  <a class="brand" href="https://users.metu.edu.tr/e194202/" aria-label="Zafer Elcik">Z</a>
-  <div class="nav-right">
-    <a class="btn" href="https://users.metu.edu.tr/e194202/"><span class="en">About me</span><span class="tr">Hakkımda</span> <span aria-hidden="true">↗</span></a>
-    <div class="lang" role="group" aria-label="Language">
-      <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
-      <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
-    </div>
-  </div>
-</header>
+<div class="lang" role="group" aria-label="Language">
+  <button type="button" data-set-lang="tr" aria-pressed="false">TR</button>
+  <button type="button" data-set-lang="en" aria-pressed="true">EN</button>
+</div>
 
-<main class="wrap">
-  <section class="sheet">
-    <div class="halftone"></div>
-    <div class="halftone tr-corner" style="opacity:.55"></div>
-    <div class="hero-inner">
-      <img class="avatar" src="avatar.jpg" alt="Zafer Elcik" width="112" height="112">
-      <div class="badges mono">
-        <span>Zafer Elcik</span><span class="dot">•</span>
-        <span>CEO, Otsimo</span><span class="dot">•</span>
-        <span>Ankara</span>
-      </div>
-      <h1><span class="en">Let's talk.</span><span class="tr">Konuşalım.</span></h1>
-      <p class="lede">
-        <span class="en">The quickest ways to reach me directly. WhatsApp is usually fastest.</span>
-        <span class="tr">Bana doğrudan ulaşmanın en hızlı yolları. Genelde en hızlısı WhatsApp.</span>
-      </p>
-    </div>
-  </section>
+<main>
+  <header>
+    <img class="avatar" src="avatar.jpg" alt="Zafer Elcik" width="104" height="104">
+    <h1>Zafer Elcik</h1>
+    <p class="role mono" lang="en">CEO, Otsimo<span class="dot">•</span>Ankara</p>
+  </header>
 
-  <div class="channels">
-    <a class="ch rv" href="https://wa.me/905072127619" target="_blank" rel="noopener">
-      <div class="ch-top">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg></span>
-        <span class="arr" aria-hidden="true">↗</span>
-      </div>
-      <div class="body">
-        <span class="k mono"><span class="en">Fastest</span><span class="tr">En hızlı</span></span>
-        <span class="t">WhatsApp</span>
-        <span class="v"><span class="en">Send a message</span><span class="tr">Mesaj gönder</span></span>
-      </div>
+  <nav class="links">
+    <a class="link primary" href="https://wa.me/905072127619" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg></span>
+      <span class="txt"><b>WhatsApp</b><span><span class="en">Fastest way to reach me</span><span class="tr">Bana en hızlı ulaşma yolu</span></span></span>
+      <span class="arr" aria-hidden="true">↗</span>
     </a>
-
-    <a class="ch rv" href="tel:+905072127619">
-      <div class="ch-top">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
-        <span class="arr" aria-hidden="true">↗</span>
-      </div>
-      <div class="body">
-        <span class="k mono"><span class="en">Phone</span><span class="tr">Telefon</span></span>
-        <span class="t"><span class="en">Call me</span><span class="tr">Beni ara</span></span>
-        <span class="v">+90 507 212 76 19</span>
-      </div>
+    <a class="link" href="tel:+905072127619">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+      <span class="txt"><b><span class="en">Call</span><span class="tr">Ara</span></b><span>+90 507 212 76 19</span></span>
+      <span class="arr" aria-hidden="true">↗</span>
     </a>
-
-    <a class="ch rv" href="mailto:zafer@otsimo.com">
-      <div class="ch-top">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.4 7l6.6 4.6L18.6 7H5.4z"/></svg></span>
-        <span class="arr" aria-hidden="true">↗</span>
-      </div>
-      <div class="body">
-        <span class="k mono">E-mail</span>
-        <span class="t"><span class="en">Write to me</span><span class="tr">Bana yaz</span></span>
-        <span class="v">zafer@otsimo.com</span>
-      </div>
+    <a class="link" href="mailto:zafer@otsimo.com">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18c.6 0 1 .4 1 1v12c0 .6-.4 1-1 1H3c-.6 0-1-.4-1-1V6c0-.6.4-1 1-1zm1 2.3V17h16V7.3l-8 5.6-8-5.6zM5.4 7l6.6 4.6L18.6 7H5.4z"/></svg></span>
+      <span class="txt"><b>E-mail</b><span>zafer@otsimo.com</span></span>
+      <span class="arr" aria-hidden="true">↗</span>
     </a>
-
-    <a class="ch rv" href="https://www.linkedin.com/in/zaferelcik/" target="_blank" rel="noopener">
-      <div class="ch-top">
-        <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></span>
-        <span class="arr" aria-hidden="true">↗</span>
-      </div>
-      <div class="body">
-        <span class="k mono">LinkedIn</span>
-        <span class="t"><span class="en">Connect</span><span class="tr">Bağlantı kur</span></span>
-        <span class="v">in/zaferelcik</span>
-      </div>
+    <a class="link" href="https://www.linkedin.com/in/zaferelcik/" target="_blank" rel="noopener">
+      <span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></span>
+      <span class="txt"><b>LinkedIn</b><span>in/zaferelcik</span></span>
+      <span class="arr" aria-hidden="true">↗</span>
     </a>
-  </div>
+  </nav>
 
-  <footer>
-    <span>© Zafer Elcik</span>
-    <a href="https://users.metu.edu.tr/e194202/"><span class="en">Full profile</span><span class="tr">Tüm profil</span> ↗</a>
-  </footer>
+  <footer class="mono"><a href="https://users.metu.edu.tr/e194202/"><span class="en">More about me</span><span class="tr">Hakkımda</span> ↗</a></footer>
 </main>
 
 <script>
