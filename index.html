@@ -1,104 +1,165 @@
-<html lang="en" class="">
+<!doctype html>
+<html lang="en">
 
 <head>
         <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta http-equiv="Content-Language" content="en">
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-        <title>@zaferelcik | phone call</title>
-        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Zafer Elcik | Contact</title>
+        <meta name="description" content="Get in touch with Zafer Elcik — call, WhatsApp or LinkedIn.">
         <meta property="og:locale" content="en_US">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="@zaferelcik | phone call">
-        <link rel="stylesheet" type="text/css" href="./main.css">
-        <link rel="stylesheet" type="text/css" href="./service.css">
+        <meta property="og:title" content="Zafer Elcik | Contact">
+        <meta property="og:description" content="Call, WhatsApp or LinkedIn.">
+        <meta name="theme-color" content="#1eaffb">
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231eaffb'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>Z</text></svg>">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+        <style>
+                :root {
+                        --brand: #1eaffb;
+                        --brand-dark: #0b8fd6;
+                        --bg: #f4f9fd;
+                        --card: #ffffff;
+                        --text: #0f1b2a;
+                        --muted: #5b6b7d;
+                        --line: #e3edf5;
+                }
+
+                @media (prefers-color-scheme: dark) {
+                        :root {
+                                --bg: #0b1520;
+                                --card: #13212f;
+                                --text: #e8f1f8;
+                                --muted: #8fa3b6;
+                                --line: #1f3244;
+                        }
+                }
+
+                * { box-sizing: border-box; margin: 0; padding: 0; }
+
+                body {
+                        min-height: 100vh;
+                        font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+                        color: var(--text);
+                        background:
+                                radial-gradient(1200px 500px at 50% -200px, rgba(30, 175, 251, .22), transparent 70%),
+                                var(--bg);
+                        display: flex;
+                        justify-content: center;
+                        padding: 64px 16px 40px;
+                        -webkit-font-smoothing: antialiased;
+                }
+
+                main { width: 100%; max-width: 440px; }
+
+                .profile { text-align: center; margin-bottom: 32px; }
+
+                .avatar {
+                        width: 96px;
+                        height: 96px;
+                        margin: 0 auto 16px;
+                        border-radius: 50%;
+                        display: grid;
+                        place-items: center;
+                        font-size: 34px;
+                        font-weight: 700;
+                        letter-spacing: -1px;
+                        color: #fff;
+                        background: linear-gradient(135deg, #4cc3ff, var(--brand-dark));
+                        box-shadow: 0 0 0 4px var(--card), 0 0 0 6px rgba(30, 175, 251, .35), 0 12px 30px rgba(30, 175, 251, .3);
+                }
+
+                h1 { font-size: 24px; font-weight: 700; letter-spacing: -.4px; }
+
+                .tagline { margin-top: 6px; font-size: 15px; color: var(--muted); }
+
+                .links { display: flex; flex-direction: column; gap: 12px; list-style: none; }
+
+                .link {
+                        display: flex;
+                        align-items: center;
+                        gap: 14px;
+                        padding: 14px 16px;
+                        border-radius: 16px;
+                        background: var(--card);
+                        border: 1px solid var(--line);
+                        color: var(--text);
+                        text-decoration: none;
+                        box-shadow: 0 1px 2px rgba(15, 27, 42, .04);
+                        transition: transform .2s cubic-bezier(.08, .59, .29, .99), box-shadow .2s, border-color .2s;
+                }
+
+                .link:hover, .link:focus-visible {
+                        transform: translateY(-2px);
+                        border-color: var(--brand);
+                        box-shadow: 0 10px 24px rgba(30, 175, 251, .18);
+                        outline: none;
+                }
+
+                .link:active { transform: translateY(0); }
+
+                .icon {
+                        flex: none;
+                        width: 44px;
+                        height: 44px;
+                        border-radius: 12px;
+                        display: grid;
+                        place-items: center;
+                        color: #fff;
+                        background: var(--brand);
+                }
+
+                .icon svg { width: 22px; height: 22px; fill: currentColor; }
+
+                .icon.whatsapp { background: #25d366; }
+                .icon.linkedin { background: #0a66c2; }
+
+                .label { flex: 1; min-width: 0; }
+                .label strong { display: block; font-size: 16px; font-weight: 600; }
+                .label span { display: block; margin-top: 2px; font-size: 13px; color: var(--muted); }
+
+                .arrow { flex: none; color: var(--muted); transition: transform .2s, color .2s; }
+                .link:hover .arrow { color: var(--brand); transform: translateX(3px); }
+
+                footer { margin-top: 40px; text-align: center; font-size: 13px; color: var(--muted); }
+        </style>
 </head>
-<style>
-        .service.theme.colourway-leaf .btn-link {
-                color: #fff;
-                border-color: #1eaffb;
-                border-width: 2px;
-                border-style: solid;
-                background-color: #1eaffb;
-                text-align: center;
-                position: relative;
-                -webkit-transition: all .25s cubic-bezier(.08, .59, .29, .99);
-                transition: all .25s cubic-bezier(.08, .59, .29, .99);
-                z-index: 2
-        }
 
-        .service.theme.colourway-leaf .btn-link:hover {
-                color: #1eaffb;
-                background-color: transparent
-        }
-</style>
+<body>
+        <main>
+                <header class="profile">
+                        <div class="avatar" aria-hidden="true">ZE</div>
+                        <h1>Zafer Elcik</h1>
+                        <p class="tagline">Reach me directly</p>
+                </header>
 
-<body class="service theme colourway-leaf video no-touch browser-chrome" data-account="zaferelcik" style="">
-        <div class="service">
-                <header class="service-header"></header>
-                <section class="main">
-                        <div class="container service-container">
-                                <div class="user-area">
-                                        <div class="text-xs-center"><img class="user-img img-circle" src="https://pbs.twimg.com/profile_images/1026156252714426370/pQZnqNOS_400x400.jpg"><h3><a
-                                                                class="user-name btn">
-                                                                Zafer Elcik
-                                                        </a></h3>
-                                        </div>
-                                </div>
-                                <div class="links">
-                                        <div>
-                                                <div>   
-                                                        <div class="link"><a href="tel:+16506009262" data-link-id="123"
-                                                                        data-link-title="US Phone Number" data-link-url="tel:+16506009262"
-                                                                        data-account-id="875334" data-account-username="zaferelcik"
-                                                                        class="btn btn-link  " target="_blank">
-                                                                        Call by Phone - US
+                <ul class="links">
+                        <li>
+                                <a class="link" href="tel:+905072127619">
+                                        <span class="icon"><svg viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></span>
+                                        <span class="label"><strong>Call by Phone</strong><span>+90 507 212 76 19</span></span>
+                                        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                                </a>
+                        </li>
+                        <li>
+                                <a class="link" href="https://wa.me/905072127619" target="_blank" rel="noopener">
+                                        <span class="icon whatsapp"><svg viewBox="0 0 24 24"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 1 1 12 21.8zM12 0a12 12 0 0 0-10.3 18L0 24l6.2-1.6A12 12 0 1 0 12 0z"/></svg></span>
+                                        <span class="label"><strong>Message on WhatsApp</strong><span>Fastest way to reach me</span></span>
+                                        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                                </a>
+                        </li>
+                        <li>
+                                <a class="link" href="https://www.linkedin.com/in/zaferelcik/" target="_blank" rel="noopener">
+                                        <span class="icon linkedin"><svg viewBox="0 0 24 24"><path d="M20.4 20.5h-3.6v-5.6c0-1.3 0-3-1.8-3s-2.1 1.4-2.1 2.9v5.7H9.4V9h3.4v1.6c.5-.9 1.6-1.8 3.4-1.8 3.6 0 4.3 2.4 4.3 5.5v6.2zM5.3 7.4a2.1 2.1 0 1 1 0-4.2 2.1 2.1 0 0 1 0 4.2zM7.1 20.5H3.6V9h3.5v11.5z"/></svg></span>
+                                        <span class="label"><strong>Connect on LinkedIn</strong><span>linkedin.com/in/zaferelcik</span></span>
+                                        <svg class="arrow" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18l6-6-6-6"/></svg>
+                                </a>
+                        </li>
+                </ul>
 
-                                                                </a></div> 
-                                                        
-                                                        <div class="link"><a href="tel:+905072127619" data-link-id="1234"
-                                                                        data-link-title="TR Phone Number" data-link-url="tel:+905072127619"
-                                                                        data-account-id="875334" data-account-username="zaferelcik"
-                                                                        class="btn btn-link  " target="_blank">
-                                                                        Call by Phone - Europe
-
-                                                                </a></div> 
-                                                        
-                                                        <div class="link"><a href="https://tidycal.com/zafer/30-min"
-                                                                        data-link-id="3945591" data-link-title="Schedule a fixed call"
-                                                                        data-link-url="https://tidycal.com/zafer/30-min" data-account-id="875334"
-                                                                        data-account-username="zaferelcik" class="btn btn-link  "
-                                                                        target="_blank">
-                                                                        Schedule a fixed call
-
-                                                                </a></div>
-                                                        
-                                                        <div class="link"><a href="https://wa.me/905072127619" data-link-id="3945365"
-                                                                        data-link-title="TR Phone Number" data-link-url="tel:+905072127619"
-                                                                        data-account-id="875334" data-account-username="zaferelcik"
-                                                                        class="btn btn-link  " target="_blank">
-                                                                        Send Message on Whatsapp
-
-                                                                </a></div>
-                                                        
-                                                        <div class="link"><a href="https://www.linkedin.com/in/zaferelcik/"
-                                                                        data-link-id="3945650" data-link-title="Add me on Linkedin"
-                                                                        data-link-url="https://www.linkedin.com/in/zaferelcik/" data-account-id="875334"
-                                                                        data-account-username="zaferelcik" class="btn btn-link  "
-                                                                        target="_blank">
-                                                                        Add me on Linkedin
-
-                                                                </a></div>
-                                                </div>
-                                        </div>
-                                </div>
-                        </div>
-                </section>
-                <section class="service-footer">
-                        <div class="service-logo-wrap"></div>
-                </section>
-
-
+                <footer>zafer.tel</footer>
+        </main>
 </body>
 
 </html>
