@@ -10,6 +10,7 @@
         <meta property="og:type" content="website">
         <meta property="og:title" content="Zafer Elcik | Contact">
         <meta property="og:description" content="Call, WhatsApp or LinkedIn.">
+        <meta property="og:image" content="https://zafer.tel/avatar.jpg">
         <meta name="theme-color" content="#1eaffb">
         <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='50' fill='%231eaffb'/><text x='50' y='66' font-size='46' font-family='Arial' font-weight='700' fill='white' text-anchor='middle'>Z</text></svg>">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,13 +61,9 @@
                         height: 96px;
                         margin: 0 auto 16px;
                         border-radius: 50%;
-                        display: grid;
-                        place-items: center;
-                        font-size: 34px;
-                        font-weight: 700;
-                        letter-spacing: -1px;
-                        color: #fff;
-                        background: linear-gradient(135deg, #4cc3ff, var(--brand-dark));
+                        display: block;
+                        object-fit: cover;
+                        background: var(--line);
                         box-shadow: 0 0 0 4px var(--card), 0 0 0 6px rgba(30, 175, 251, .35), 0 12px 30px rgba(30, 175, 251, .3);
                 }
 
@@ -129,7 +126,7 @@
 <body>
         <main>
                 <header class="profile">
-                        <div class="avatar" aria-hidden="true">ZE</div>
+                        <img class="avatar" src="avatar.jpg" alt="Zafer Elcik" width="96" height="96">
                         <h1>Zafer Elcik</h1>
                         <p class="tagline">Reach me directly</p>
                 </header>
